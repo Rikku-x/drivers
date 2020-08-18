@@ -1,0 +1,21 @@
+{
+  "testRunner": "mocha",
+  "runnerConfig": "e2e/.mocharc.json",
+  "configurations": {
+    "ios": {
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/example.app",
+      "build": "xcodebuild -project ios/example.xcodeproj -scheme example -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11 Pro"
+      }
+    },
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
